@@ -43,6 +43,23 @@ body {
     font-weight: bold;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -197,47 +214,119 @@ body {
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
+    .hamburger {
+        display: flex;
     }
 
     .nav-menu {
-        margin-top: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        display: none;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.active {
+        display: flex;
     }
 
     .nav-menu li {
-        margin-left: 0;
-        margin-right: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .about-container {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 30px;
+        padding: 0 1rem;
     }
 
     .about-text {
         max-width: none;
+        padding: 0 1rem;
     }
 
     .about-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
     }
 
     .about-text .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-text .about-me {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-animation lottie-player {
+        width: 200px !important;
+        height: 200px !important;
     }
 
     .section {
-        padding: 80px 0 60px;
+        padding: 100px 0 50px; /* Aumentei o padding-top para compensar header maior */
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
     }
 
     .tech-list {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    #sobre p, #contato p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Responsivo para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .about-container {
+        gap: 30px;
+    }
+
+    .home-animation lottie-player {
+        width: 400px !important;
+        height: 300px !important;
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text .subtitle {
+        font-size: 1.3rem;
     }
 }

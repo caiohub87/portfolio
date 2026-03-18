@@ -29,11 +29,9 @@
                     <!-- Subtítulo com a profissão -->
                     <p class="subtitle">Analista de Dados e Desenvolvedor de Software</p>
                     <!-- Parágrafo com uma breve descrição sobre o desenvolvedor -->
-                    <p class="about-me">Transformar dados em decisões é o que me move. </p>
-                        
-<p> Estou em construção na área de Análise de Dados, desenvolvendo habilidades em Python, SQL e ferramentas de visualização, sempre com foco em resolver problemas reais através dos dados.</p>
-
-<p>Busco minha primeira oportunidade na área de tecnologia, onde eu possa aprender, evoluir e gerar impacto com o que construo.</p>
+                    <p class="about-me">Transformar dados em decisões é o que me move.<br>                        
+Estou em construção na área de Análise de Dados, desenvolvendo habilidades em Python, SQL e ferramentas de visualização, sempre com foco em resolver problemas reais através dos dados. <br>
+Busco minha primeira oportunidade na área de tecnologia, onde eu possa aprender, evoluir e gerar impacto com o que construo.</p>
                     <!-- Botão para rolar até a seção de projetos -->
                     <a href="#projetos" class="btn">Ver Projetos</a>
                 </div>
@@ -120,7 +118,7 @@
     <!-- Inclui o arquivo footer.php usando PHP -->
     <?php include 'includes/footer.php'; ?>
 
-    <!-- Script JavaScript para navegação suave -->
+    <!-- Script JavaScript para navegação suave e menu hambúrguer -->
     <script>
         // Seleciona todos os links que começam com # (âncoras)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -132,6 +130,23 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Menu hambúrguer
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
             });
         });
     </script>
