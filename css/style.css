@@ -305,9 +305,15 @@ body {
         padding: 0 1rem;
     }
 
-    #sobre p, #contato p {
-        font-size: 1rem;
-        padding: 0 1rem;
+    .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .glassIco {
+        --width: 50px;
+        font-size: 20px;
+        margin: 5px;
     }
 }
 
@@ -329,4 +335,60 @@ body {
     .about-text .subtitle {
         font-size: 1.3rem;
     }
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.glassIco {
+    --width: 60px;
+    box-sizing: border-box;
+    transition: 200ms;
+    width: var(--width);
+    height: var(--width);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.glassIco:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(0px);
+    transition: 400ms;
+    transform: skewX(45deg) translateX(calc(var(--width) + 50%));
+}
+
+.glassIco:hover {
+    transform: translateY(-10px);
+}
+
+.glassIco:hover:before {
+    transform: skewX(45deg) translateX(calc(var(--width) * -1 - 50%));
+}
+
+.glassIco > * {
+    opacity: 0.8;
 }

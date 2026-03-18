@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título da página que aparece na aba do navegador -->
     <title>Portfólio - Desenvolvedor</title>
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Script para carregar o player Lottie para animações -->
@@ -111,7 +113,14 @@ Busco minha primeira oportunidade na área de tecnologia, onde eu possa aprender
             <!-- Parágrafo com email -->
             <p>Email: seuemail@example.com</p>
             <!-- Link para o GitHub -->
-            <p><a href="https://github.com/seuusuario" target="_blank">GitHub</a></p>
+            <p><a href="https://github.com/caiohub87" target="_blank">GitHub</a></p>
+            <!-- Ícones de redes sociais -->
+            <div class="social-icons">
+                <a class="glassIco" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="glassIco" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="glassIco" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="glassIco" href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
     </section>
 
