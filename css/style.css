@@ -72,18 +72,35 @@ body {
 
 #home {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    text-align: center;
 }
 
-#home h1 {
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.subtitle {
+.about-text .subtitle {
     font-size: 1.5rem;
     color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.about-text .about-me {
+    font-size: 1.1rem;
+    color: #ffffff;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .btn {
@@ -193,11 +210,21 @@ body {
         margin-right: 1rem;
     }
 
-    #home h1 {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-text {
+        max-width: none;
+    }
+
+    .about-text h1 {
         font-size: 2rem;
     }
 
-    .subtitle {
+    .about-text .subtitle {
         font-size: 1.2rem;
     }
 

@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Desenvolvedor</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
 
     <section id="home" class="section">
         <div class="container">
-            <h1>Seu Nome</h1>
-            <p class="subtitle">Desenvolvedor em formação</p>
-            <a href="#projetos" class="btn">Ver Projetos</a>
+            <div class="about-container">
+                <div class="about-text">
+                    <h1>Seu Nome</h1>
+                    <p class="subtitle">Desenvolvedor em formação</p>
+                    <p class="about-me">Sou apaixonado por tecnologia e análise de dados. Como desenvolvedor em formação, estou sempre explorando novas ferramentas e linguagens para criar soluções inovadoras e eficientes.</p>
+                    <a href="#projetos" class="btn">Ver Projetos</a>
+                </div>
+                <lottie-player
+                    src="https://assets2.lottiefiles.com/packages/lf20_q5pk6p1k.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 250px; height: 250px;"
+                    loop
+                    autoplay>
+                </lottie-player>
+            </div>
         </div>
     </section>
 
