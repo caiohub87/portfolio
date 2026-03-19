@@ -88,36 +88,149 @@ body {
 }
 
 #home {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-}
-
-.about-container {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.about-text {
-    max-width: 500px;
+.home-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    pointer-events: none;
 }
 
-.about-text h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.home-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: radial-gradient(circle, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
 }
 
-.about-text .subtitle {
-    font-size: 1.5rem;
+.home-content-new {
+    position: absolute;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
+    color: white;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+}
+
+.home-nav {
+    display: flex;
+    padding: 12px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: hard-light;
+}
+
+.home-tab {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #a0a0a0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.home-tab.active,
+.home-tab:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.home-card {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+}
+
+.home-card-text {
+    padding: 15px;
+    flex: 1;
+}
+
+.home-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home-subtitle {
+    font-size: 14px;
     color: #cccccc;
-    margin-bottom: 1rem;
+    margin: 8px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-.about-text .about-me {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+.home-desc {
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.5;
+    margin: 8px 0 10px;
+}
+
+.home-tag {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+.home-card-img {
+    aspect-ratio: 1/1;
+    width: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.home-btn {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.home-btn:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.home-credit {
+    font-size: 12px;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.home-credit a {
+    color: #a0a0a0;
+    text-decoration: underline;
 }
 
 .btn {
@@ -251,37 +364,34 @@ body {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 0 1rem;
-    }
-
-    .about-text {
+    .home-content-new {
+        padding: 20px;
         max-width: none;
-        padding: 0 1rem;
     }
 
-    .about-text h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
+    .home-nav {
+        flex-direction: column;
+        padding: 8px;
     }
 
-    .about-text .subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
+    .home-tab {
+        padding: 10px;
+        font-size: 12px;
     }
 
-    .about-text .about-me {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
+    .home-card {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .home-animation lottie-player {
-        width: 200px !important;
-        height: 200px !important;
+    .home-card-img {
+        width: 100px;
+    }
+
+    .home-btn {
+        padding: 12px;
+        font-size: 12px;
+        letter-spacing: 1px;
     }
 
     .section {
@@ -319,21 +429,12 @@ body {
 
 /* Responsivo para tablets */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .about-container {
-        gap: 30px;
+    .home-content-new {
+        padding: 30px;
     }
 
-    .home-animation lottie-player {
-        width: 400px !important;
-        height: 300px !important;
-    }
-
-    .about-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-text .subtitle {
-        font-size: 1.3rem;
+    .home-card-img {
+        width: 120px;
     }
 }
 

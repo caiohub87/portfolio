@@ -12,41 +12,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Script para carregar o player Lottie para animações -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <!-- Inclui o arquivo header.php usando PHP -->
     <?php include 'includes/header.php'; ?>
 
     <!-- Seção principal da página (Home) -->
-    <section id="home" class="section">
-        <div class="container">
-            <!-- Container para organizar o texto e a animação lado a lado -->
-            <div class="about-container">
-                <!-- Div para o texto da seção home -->
-                <div class="about-text">
-                    <!-- Nome do desenvolvedor -->
-                    <h1>José Caio</h1>
-                    <!-- Subtítulo com a profissão -->
-                    <p class="subtitle">Analista de Dados e Desenvolvedor de Software</p>
-                    <!-- Parágrafo com uma breve descrição sobre o desenvolvedor -->
-                    <p class="about-me">Transformar dados em decisões é o que me move.<br>                        
-Estou em construção na área de Análise de Dados, desenvolvendo habilidades em Python, SQL e ferramentas de visualização, sempre com foco em resolver problemas reais através dos dados. <br>
-Busco minha primeira oportunidade na área de tecnologia, onde eu possa aprender, evoluir e gerar impacto com o que construo.</p>
-                    <!-- Botão para rolar até a seção de projetos -->
-                    <a href="#projetos" class="btn">Ver Projetos</a>
+    <section id="home" class="section home-new">
+        <img class="home-bg" src="https://images.pexels.com/photos/2339009/pexels-photo-2339009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Background">
+        <div class="home-overlay"></div>
+        <div class="home-content-new">
+            <!-- tabs -->
+            <nav class="home-nav">
+                <a class="home-tab active">Home</a>
+                <a class="home-tab">Blog</a>
+                <a class="home-tab">Album</a>
+            </nav>
+            <!-- card -->
+            <div class="home-card">
+                <div class="home-card-text">
+                    <div class="home-title">José Caio</div>
+                    <div class="home-subtitle">Analista de Dados e Desenvolvedor de Software</div>
+                    <div class="home-desc">Transformar dados em decisões é o que me move. Estou em construção na área de Análise de Dados, desenvolvendo habilidades em Python, SQL e ferramentas de visualização.</div>
+                    <div class="home-tag">🇧🇷 Brasileiro</div>
                 </div>
-                <!-- Elemento Lottie para exibir uma animação -->
-                <lottie-player
-                    src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
-                    background="transparent"
-                    speed="1"
-                    style="width: 900px; height: 500px;"
-                    loop
-                    autoplay>
-                </lottie-player>
+                <img class="home-card-img" src="https://images.pexels.com/photos/248444/pexels-photo-248444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Profile">
             </div>
+            <!-- button -->
+            <a href="#projetos" class="home-btn">VER PROJETOS</a>
+            <p class="home-credit">powered by <a href="https://styles.master.co" class="text:underline" target="blank">Master Styles</a></p>
         </div>
     </section>
 
